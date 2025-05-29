@@ -19,6 +19,7 @@ recordatorios.append(['2021-12-24', "22:00", "Cena Navidad"])       # Se agregan
 recordatorios.append(['2021-12-31', "22:00", "Cena Año Nuevo"])
 recordatorios.sort()                     # Se reordena lista en orden ascendente
 
-print("\nLista final de recordatorios:")      # Bucle para imprimir en orden         
+print("\nLista final recordatorios.py:")      # Bucle para imprimir en orden         
 for evento in recordatorios:
     print(f"Fecha: {evento[0]}, Hora: {evento[1]}, Evento: {evento[2]}")
+print()

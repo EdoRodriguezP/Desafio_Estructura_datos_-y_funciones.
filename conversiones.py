@@ -2,8 +2,8 @@ import sys
 
 def validar_argumentos():       # Funcion para validar ingreso de 4 argumentos sino imprime y cierra programa
     if len(sys.argv) != 5:
-        print("Error: Debe ingresar 4 argumentos")
-        print("Uso: python conversiones.py [sol] [peso_arg] [dolar] [Monto_peso_chileno]")
+        print("\nError: Debe ingresar 4 argumentos")
+        print("Uso: python conversiones.py [sol] [peso_arg] [dolar] [Monto_peso_chileno]\n")
         sys.exit(1)         # Termina con codigo de error.
         
 def conversion_monedas(monto, tasas):     # Funcion para la conversion de monedas
@@ -26,13 +26,13 @@ def ingreso_tasas_monto():   # Funcion para ingreso y muestra de resultados
         
         resultado = conversion_monedas(monto_clp, tasas) # Llama a la variable conversion y la guarda en resultados
         
-        print(f"Los {monto_clp:.0f} pesos equivalen a:")   # Imprime los resultados
+        print(f"\nLos {monto_clp:.0f} pesos equivalen a:\n")   # Imprime los resultados
         print(f"{resultado['soles']:.1f} Soles")
         print(f"{resultado['peso_arg']:.1f} Pesos Argentinos")
-        print(f"{resultado['dolar']:.1f} Dólares")
+        print(f"{resultado['dolar']:.1f} Dólares\n")
         
     except ValueError:        # Maneja error si los argumentos no son numeros validos
-        print("Error: Todos los argumentos deben ser números")
+        print("\nError: Todos los argumentos deben ser números\n")
         sys.exit(1)
 
 if __name__ == "__main__":    # Para que este código solo se ejecute cuando el script es el programa principal
